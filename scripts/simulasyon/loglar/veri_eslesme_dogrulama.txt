@@ -1,0 +1,54 @@
+
+##### train: EN=7473 TR=7472
+  kayma 0: son cevap uyumu 75/7472
+  kayma 1: son cevap uyumu 7472/7472
+  seçilen kayma: TR[i] = EN[i+1]
+  tüm satırlarda son cevap uyumu: 7472/7472
+  OK  TR  128 ↔ EN  129 | son       10 /       10 | adım 2/2 | "Dan'in bir dondurma dükkanı var ve her altı müşteriden biri "
+  OK  TR  561 ↔ EN  562 | son       57 /       57 | adım 6/6 | 'Joy köpekleri besler. Anne koruyucu köpek günde üç kez 1,5 b'
+  OK  TR  772 ↔ EN  773 | son      121 /      121 | adım 5/5 | "Amoli ve Anayet'in birlikte 369 mil yol kat etmesi gerekiyor"
+  OK  TR  921 ↔ EN  922 | son   426000 /   426000 | adım 7/7 | 'Cadence, yeni şirketinde eski şirketinde çalıştığından beş a'
+  OK  TR 1142 ↔ EN 1143 | son       30 /       30 | adım 4/4 | 'Yeni Craftee And Best mağazasında ahşap oyuncak almanın fiya'
+  OK  TR 1921 ↔ EN 1922 | son       24 /       24 | adım 4/4 | 'Stormi bisiklet almak için para biriktiriyor. Tanesi 10 dola'
+  OK  TR 2083 ↔ EN 2084 | son       22 /       22 | adım 4/4 | "Timmy'nin ebeveynlerinin 2 arabalık bir garajı var ve içinde"
+  OK  TR 2876 ↔ EN 2877 | son       20 /       20 | adım 3/3 | 'Stuart ülke çapında bir geziye çıkıyor ve en hızlı rotayı bu'
+  OK  TR 3218 ↔ EN 3219 | son       20 /       20 | adım 2/2 | 'Cory 135 dolara bir veranda masası ve 4 sandalye satın aldı.'
+  OK  TR 3627 ↔ EN 3628 | son       64 /       64 | adım 5/5 | 'Edmund yeni bir bilgisayar alıyor ve yeterli paraya sahip ol'
+  OK  TR 4337 ↔ EN 4338 | son       60 /       60 | adım 2/2 | 'Tankta çok sayıda balık var. Bunların üçte biri mavidir ve l'
+  OK  TR 5039 ↔ EN 5040 | son      140 /      140 | adım 6/6 | "Bir gölette 320 ördek var. İlk gece 1/4'ü tilki tarafından y"
+  OK  TR 5746 ↔ EN 5747 | son       27 /       27 | adım 3/3 | 'Bir torba jöle fasulyesinde 8 siyah fasulye ve 2 yeşil fasul'
+  OK  TR 5926 ↔ EN 5927 | son       50 /       50 | adım 3/3 | 'Kim bir ofis yöneticisidir. Her sabah 5 dakikasını kahve yap'
+  OK  TR 6222 ↔ EN 6223 | son        6 /        6 | adım 4/4 | 'Bernie çikolata yemeyi çok seviyor. Yerel mağazadan her haft'
+  OK  TR 6383 ↔ EN 6384 | son       36 /       36 | adım 6/6 | "Sam, Sue'nun iki katı kadar yaşlıdır. Kendra, Sam'den 3 kat "
+  OK  TR 6437 ↔ EN 6438 | son        4 /        4 | adım 3/3 | 'Bir marangoz, projeleri için yeterli mobilya ayağı yapıyor. '
+  OK  TR 6523 ↔ EN 6524 | son       75 /       75 | adım 4/4 | 'Lynne kediler hakkında 7 kitap ve güneş sistemi hakkında 2 k'
+  OK  TR 6885 ↔ EN 6886 | son     1360 /     1360 | adım 3/3 | 'Bir beyzbol şapkası fabrikası ilk hafta 320, ikinci hafta 40'
+  OK  TR 7098 ↔ EN 7099 | son     1800 /     1800 | adım 2/2 | 'Matt saniyede 3 kez ip atlıyor. Eğer 10 dakika boyunca atlad'
+  TR'de virgüllü ondalık etiket sonucu içeren satır: 363
+
+##### test: EN=1319 TR=1318
+  kayma 0: son cevap uyumu 15/1318
+  kayma 1: son cevap uyumu 1318/1318
+  seçilen kayma: TR[i] = EN[i+1]
+  tüm satırlarda son cevap uyumu: 1318/1318
+  OK  TR   72 ↔ EN   73 | son      255 /      255 | adım 4/4 | 'Shiela, 3 aylık taksitle her biri 150 dolara beş cep telefon'
+  OK  TR  254 ↔ EN  255 | son      192 /      192 | adım 4/4 | 'On tezgahın her birinde 20 inek var. Bay Sylas 40 inek satın'
+  OK  TR  351 ↔ EN  352 | son       21 /       21 | adım 2/2 | 'Andrea biraz para biriktirdikten sonra parasının geri kalanı'
+  OK  TR  361 ↔ EN  362 | son       23 /       23 | adım 5/5 | 'Mark özel köpek yatakları yapıyor. Bir Rottweiler yatağı 8 p'
+  OK  TR  375 ↔ EN  376 | son       15 /       15 | adım 4/4 | 'Bir sınıfta 40 öğrenci vardır. Sınıfın yarısı maviyi seviyor'
+  OK  TR  389 ↔ EN  390 | son       12 /       12 | adım 2/2 | 'Monica Noel hediyelerini paketliyor. Ailesine paketleyeceği '
+  OK  TR  420 ↔ EN  421 | son       12 /       12 | adım 4/4 | "Bir kayanın üzerinde 50 kedi vardı. Dört tekne gelip 5'er ke"
+  OK  TR  457 ↔ EN  458 | son       35 /       35 | adım 3/3 | "Jennifer'ın köpeğinin 3'ünde benekli olmak üzere 8 yavrusu v"
+  OK  TR  490 ↔ EN  491 | son       16 /       16 | adım 2/2 | 'Jaime yumurtaları tepsiye yerleştirir. Her tepsi 24 yumurta '
+  OK  TR  504 ↔ EN  505 | son    1,600 /    1.600 | adım 5/5 | 'Frederick satmak ve paradan tasarruf etmek için dondurma çub'
+  OK  TR  604 ↔ EN  605 | son       42 /       42 | adım 5/5 | 'Patrick dört saat boyunca saatte 15 bardak limonatayı bardak'
+  OK  TR  680 ↔ EN  681 | son      298 /      298 | adım 4/4 | "Katarina'nın kurabiyesi Max'inkinden 5 daha az. Max'in Kurab"
+  OK  TR  838 ↔ EN  839 | son        2 /        2 | adım 3/3 | 'Bir çiftçi bir inekten günde 5 litre süt alıyor. 3 ineği old'
+  OK  TR  871 ↔ EN  872 | son       13 /       13 | adım 5/5 | 'Yedi şişe sodanın fiyatı 21 dolar, 4 şişe suyun fiyatı ise 8'
+  OK  TR  903 ↔ EN  904 | son        8 /        8 | adım 2/2 | '9 Hızlı ve Öfkeli filmi var, Deepa her birini sinemada üçer '
+  OK  TR 1023 ↔ EN 1024 | son      300 /      300 | adım 5/5 | 'Suzanne tanesi 1 dolardan 80 kurabiye ve tanesi 4 dolardan 6'
+  OK  TR 1127 ↔ EN 1128 | son        9 /        9 | adım 3/3 | "Liam şu an 16 yaşında. İki yıl önce Liam'ın yaşı Vince'in ya"
+  OK  TR 1134 ↔ EN 1135 | son       32 /       32 | adım 3/3 | '3 ağacın her birinde 7 mavi kuş vardı. 2 farklı ağacın her b'
+  OK  TR 1141 ↔ EN 1142 | son        9 /        9 | adım 3/3 | 'Jess kavanozdaki mavi jöleli şekerlerin sayısını tahmin etme'
+  OK  TR 1267 ↔ EN 1268 | son       20 /       20 | adım 2/2 | 'Bir kule 4 mavi bloktan, bunun iki katı kadar sarı bloktan v'
+  TR'de virgüllü ondalık etiket sonucu içeren satır: 81

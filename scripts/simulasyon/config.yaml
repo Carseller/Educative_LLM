@@ -1,0 +1,70 @@
+# Öğretmen–öğrenci simülasyonu yapılandırması.
+# Göreli yollar bu dosyanın bulunduğu klasöre göre çözülür.
+
+# --- Sunucu / model ---
+model: "Qwen3.8-27B"                 # vLLM'deki ad (--served-model-name)
+api_url: "http://localhost:8000/v1"
+api_anahtari: "EMPTY"
+zaman_asimi_sn: 900                  # tek istek için
+ag_yeniden_deneme: 5                 # ağ/5xx hatasında yeniden deneme (hakem reddinden ayrı sayılır)
+# JSON şeması zorlama yöntemi: auto | response_format | structured_outputs | guided_json
+# auto: sırayla dener, çalışanı hatırlar. 00a_vllm_dogrula.py hangisinin çalıştığını söyler.
+json_zorlama: auto
+istek_tohumu: true                   # her isteğe (seed, id, rol, tur, deneme)'den türetilen seed gönder
+
+# --- Genel ---
+seed: 42
+senaryo_per_soru: 3
+eszamanli: 32
+maks_ogretmen_turu: 8
+deneme_sayisi: 3                     # tur başına hakem reddinde en fazla deneme
+
+# Örnekleme. temperature/top_p/max_tokens/presence_penalty doğrudan, diğerleri (top_k, min_p,
+# repetition_penalty) vLLM'e extra_body ile gider. Değerler başlangıç tahminidir; modelin
+# model kartındaki önerilen değerler farklıysa onları yazın.
+ogretmen_ornekleme: {temperature: 0.6, top_p: 0.95, max_tokens: 6000}
+ogrenci_ornekleme: {temperature: 0.9, top_p: 0.95, max_tokens: 300}
+
+# --- Hakem eşikleri ---
+maks_ogrenci_kelime: 60
+maks_ogretmen_kelime: 120
+maks_soru: 1
+tekrar_esik: 0.8                     # öğretmen: önceki öğretmen mesajıyla difflib oranı
+ogrenci_tekrar_esik: 0.9             # öğrenci: "birebir/çok benzer"
+dil_en_orani_ust: 0.2                # İngilizce işaret oranı bunun altındaysa metin Türkçe sayılır
+dil_en_orani_alt_ingilizce: 0.8      # bunun üstündeyse İngilizce, arası karışık
+cesitlilik_esik: 0.20
+
+# --- Senaryo oranları ---
+bilgi_sablonu_oranlari: {hepsi_biliyor: 0.25, bir_hatali: 0.25, bir_kilitli: 0.25, hatali_ve_kilitli: 0.25}
+acilis_oranlari: {kopyala_yapistir: 0.25, cevabi_ne: 0.25, yanlis_denemeli: 0.25, kontrol_isteyen: 0.25}
+davranis_oranlari: {isbirlikci: 0.2, kaygili: 0.2, israrci: 0.2, tahmin_avcisi: 0.2, sorgulayan: 0.2}
+hata_tipleri: [islem_hatasi, yanlis_islem_secimi, birim_hatasi, ilgisiz_veri_kullanma, adim_atlama]
+israr_sayilari: [1, 2, 3]
+israr_taktikleri: [izin_iddiasi, rol_yapma, sik_sorma, yalvarma, baska_yz_kiyas]
+uslup:
+  yazim: [kucuk_harf_noktalamasiz, kucuk_harf, duzgun, yazim_hatali]
+  baglam: [yok, yarin_teslim, gece_gec_saat, sinav_oncesi, odev_cok]
+  ton: [kibar, aceleci, umursamaz, yorgun]
+
+# --- Kaynak veri ---
+kaynak:
+  en: {ad: "openai/gsm8k", config: "socratic"}
+  tr: {ad: "malhajar/gsm8k-tr", config: "socratic"}
+
+# --- Dosyalar ---
+dizinler:
+  veri: veri
+  log: loglar
+  istem: istemler
+istemler:
+  ogretmen_sistem: ogretmen_sistem_v1.md
+  ogrenci_tur: ogrenci_tur_v1.md
+  ogrenci_acilis: ogrenci_acilis_v1.md
+  ogrenci_tanimlar: ogrenci_tanimlar_v1.yaml
+  yasakli_ifadeler: yasakli_ifadeler.yaml
+
+# --- Sahte istemci (--sahte) ---
+sahte:
+  ogretmen_hata_orani: 0.2           # ilk denemede bilerek kural ihlali üretme olasılığı
+  ogrenci_hata_orani: 0.1

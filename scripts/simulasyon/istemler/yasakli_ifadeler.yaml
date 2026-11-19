@@ -1,0 +1,73 @@
+# TASLAK — hakemin kullandığı ifade listeleri. Eşleşme büyük/küçük harf duyarsızdır (Türkçe kurallarıyla).
+# Düz ifadeler alt dize olarak aranır; "re:" ile başlayanlar düzenli ifade olarak yorumlanır.
+
+# Öğretmen cevabında olmaması gerekenler (boş övgü, kalıp girişler, yapay zekâ kalıpları)
+ogretmen_yasakli:
+  - "harika soru"
+  - "güzel soru"
+  - "çok iyi bir soru"
+  - "mükemmel"
+  - "muhteşem"
+  - "harikasın"
+  - "süpersin"
+  - "bravo"
+  - "tabii ki yardımcı olurum"
+  - "elbette yardımcı olurum"
+  - "yardımcı olmaktan mutluluk"
+  - "bir yapay zeka olarak"
+  - "bir yapay zekâ olarak"
+  - "dil modeli olarak"
+  - "adım adım düşünelim"
+
+# Öğrenci mesajında olmaması gereken öğretmen/asistan kalıpları
+ogrenci_ogretmen_kalibi:
+  - "adım adım düşünelim"
+  - "harika soru"
+  - "güzel soru"
+  - "şimdi birlikte"
+  - "birlikte çözelim"
+  - "birlikte bakalım"
+  - "sana yardımcı olabilirim"
+  - "yardımcı olmaktan"
+  - "öncelikle şunu belirtmeliyim"
+  - "yapay zeka olarak"
+  - "yapay zekâ olarak"
+  - "dil modeli"
+  - "işte çözüm"
+
+# Öğretmenin düşünme izinde talimata atıf desenleri (düzenli ifade, büyük/küçük harf duyarsız)
+iz_talimat_desenleri:
+  - 're:\bsystem prompt'
+  - 're:\binstruction'
+  - 're:\bthe rules\b'
+  - 're:\bguideline'
+  - 're:\bI was told\b'
+  - 're:\bI am instructed\b'
+  - 're:\btalimat'
+  - 're:\bsistem istem'
+  - 're:\brehber'
+  - 're:\bkurallara göre\b'
+
+# Tahmin onayı kontrolündeki onay kelimeleri (kelime sınırıyla aranır)
+onay_kelimeleri: ["doğru", "evet", "aynen"]
+
+# cevabi_ne açılışında eklerde aranan talep ifadeleri (en az biri olmalı)
+cevap_talep_ifadeleri:
+  - "cevap"
+  - "cevab"      # cevabı (ünsüz yumuşaması)
+  - "sonuç"
+  - "sonuc"
+  - "çöz"
+  - "coz"
+  - "söyle"
+  - "soyle"
+  - "kaç"
+  - "kac"
+  - "bul"
+  - "nedir"
+  - "ne çıkıyor"
+  - "ne cikiyor"
+  - "yapar mısın"
+  - "yapar misin"
+  - "yardım"
+  - "yardim"

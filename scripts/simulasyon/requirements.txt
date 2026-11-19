@@ -1,0 +1,6 @@
+# Simülasyon betikleri (vLLM sunucusu ayrı kurulur; bkz. README)
+datasets>=3.0
+pyyaml>=6.0
+openai>=1.40
+httpx>=0.27
+pytest>=8.0

@@ -1,0 +1,24 @@
+# Simülasyonun ürettiği veriler ve loglar (repoya girmez; kaynak_veri/ girer)
+simulasyon/veri/
+simulasyon/loglar/
+
+# Gizli bilgiler
+.env
+*.token
+secrets*
+
+# Model ağırlıkları ve önbellekler
+*.safetensors
+*.bin
+*.gguf
+models/
+.cache/
+hf_cache/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+.ipynb_checkpoints/
